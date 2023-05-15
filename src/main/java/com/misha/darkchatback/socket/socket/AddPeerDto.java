@@ -1,4 +1,4 @@
-package com.misha.darkchatback.dto.socket;
+package com.misha.darkchatback.socket.socket;
 
 public class AddPeerDto {
     private String peerID;

@@ -1,7 +1,8 @@
-package com.misha.darkchatback.security.jwt;
+package com.misha.darkchatback.filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.misha.darkchatback.exception.InvalidJwtAuthenticationException;
+import com.misha.darkchatback.security.jwt.JwtTokenProvider;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;

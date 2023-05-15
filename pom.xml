@@ -68,7 +68,6 @@
 			<artifactId>netty-socketio</artifactId>
 			<version>1.7.7</version>
 		</dependency>
-		<!--	Fix java.lang.ClassNotFoundException: javax.xml.bind.DatatypeConverter while creating jwt	-->
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
 			<artifactId>jaxb-api</artifactId>

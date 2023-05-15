@@ -1,4 +1,4 @@
-package com.misha.darkchatback.redirect;
+package com.misha.darkchatback.filter;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -18,7 +18,8 @@ public class RedirectFilter extends GenericFilterBean {
                          FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpServletResponse resp = (HttpServletResponse) servletResponse;
-        if ((req.getRequestURI().equals("/login") || req.getRequestURI().startsWith("/room"))
+        if ((req.getRequestURI().equals("/login") || req.getRequestURI().startsWith("/room")
+                || req.getRequestURI().startsWith("/register"))
                 && req.getMethod().equals("GET")) {
             resp.sendRedirect("/");
             return;

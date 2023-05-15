@@ -39,15 +39,9 @@ public class IndexController {
                 = (org.springframework.security.core.userdetails.User)
                 SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         Optional<User> userOptional = userService.findByLogin(userDetails.getUsername());
-        if (userOptional.isPresent()) {
-            User user = userOptional.get();
-            Map<String, Object> body = new HashMap<>();
-            body.put(USERNAME_FIELD_NAME, user.getUsername());
-            return ResponseEntity.status(HttpStatus.OK).body(body);
-        } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(
-                Map.of(ERRORS_FIELD, ERRORS)
-            );
-        }
+        User user = userOptional.get();
+        Map<String, Object> body = new HashMap<>();
+        body.put(USERNAME_FIELD_NAME, user.getUsername());
+        return ResponseEntity.status(HttpStatus.OK).body(body);
     }
 }

@@ -1,8 +1,8 @@
-package com.misha.darkchatback.service.impl;
+package com.misha.darkchatback.socket.service;
 
 import com.corundumstudio.socketio.SocketIOServer;
 import com.misha.darkchatback.adapter.ChatAdapter;
-import com.misha.darkchatback.dto.socket.ListOfRoomsDto;
+import com.misha.darkchatback.socket.socket.ListOfRoomsDto;
 import com.misha.darkchatback.service.SocketService;
 import java.util.ArrayList;
 import java.util.List;

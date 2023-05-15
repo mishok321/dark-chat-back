@@ -1,19 +1,17 @@
-package com.misha.darkchatback.dto.socket;
+package com.misha.darkchatback.socket.socket;
 
-public class GetMessageDto {
+public class SendMessageDto {
     private String message;
     private String author;
     private String color;
-    private String roomID;
 
-    public GetMessageDto() {
+    public SendMessageDto() {
     }
 
-    public GetMessageDto(String message, String author, String color, String roomID) {
+    public SendMessageDto(String message, String author, String color) {
         this.message = message;
         this.author = author;
         this.color = color;
-        this.roomID = roomID;
     }
 
     public String getMessage() {
@@ -38,13 +36,5 @@ public class GetMessageDto {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public String getRoomID() {
-        return roomID;
-    }
-
-    public void setRoomID(String roomID) {
-        this.roomID = roomID;
     }
 }

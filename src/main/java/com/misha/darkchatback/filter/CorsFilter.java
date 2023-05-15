@@ -1,4 +1,4 @@
-package com.misha.darkchatback.cors;
+package com.misha.darkchatback.filter;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
